@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5854dbae788aa7e49be69c37cb390a28, type: 3}
   m_Name: YellowCharacterSpawnerSettings
   m_EditorClassIdentifier: 
-  MinDelayToSpawn: 0
-  MaxDelayToSpawn: 0
-  RaidousRange: 0
+  CharacterPrefab: {fileID: -8321194984496697976, guid: b75da2b141650fb42889542d2d7bc46f, type: 3}
+  MinDelayToSpawn: 1
+  MaxDelayToSpawn: 5
+  RaidousRange: 5

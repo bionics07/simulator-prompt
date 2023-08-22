@@ -1,4 +1,5 @@
 using Fortis.Services;
+using Fortis.Services.Character;
 using System.Collections;
 using UnityEngine;
 
@@ -36,8 +37,8 @@ namespace Fortis.Character.Spawner
 
         private IEnumerator SpawnCharacter()
         {
-            float xPosition = Random.Range(-_spawnerSettings.RaidousRange, _spawnerSettings.RaidousRange);
-            float zPosition = Random.Range(-_spawnerSettings.RaidousRange, _spawnerSettings.RaidousRange);
+            float xPosition = Random.Range(-_spawnerSettings.RaidousRange, _spawnerSettings.RaidousRange) + transform.position.x;
+            float zPosition = Random.Range(-_spawnerSettings.RaidousRange, _spawnerSettings.RaidousRange) + transform.position.z;
 
             Vector3 positionToSpawn = new Vector3(xPosition, 0, zPosition);
 

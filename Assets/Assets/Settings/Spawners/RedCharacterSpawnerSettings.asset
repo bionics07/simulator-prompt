@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5854dbae788aa7e49be69c37cb390a28, type: 3}
   m_Name: RedCharacterSpawnerSettings
   m_EditorClassIdentifier: 
-  MinDelayToSpawn: 0
-  MaxDelayToSpawn: 0
-  RaidousRange: 0
+  CharacterPrefab: {fileID: -2407555983689691940, guid: f241d136a9b81ea4a9859e8770ec3a7a, type: 3}
+  MinDelayToSpawn: 1
+  MaxDelayToSpawn: 5
+  RaidousRange: 5
