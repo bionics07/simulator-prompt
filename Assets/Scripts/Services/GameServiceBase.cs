@@ -1,6 +1,8 @@
+using UnityEngine;
+
 namespace Fortis.Services
 {
-    public class GameServiceBase
+    public class GameServiceBase : MonoBehaviour
     {
         public void Register()
         {
