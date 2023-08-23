@@ -12,7 +12,15 @@ namespace Fortis.Character.Spawner
 
         private Coroutine _spawnerCoroutine;
 
+        public float CurrentMinSpawnDelay { get; set; } = 0;
+        public float CurrentMaxSpawnDelay { get; set; } = 0;
         public SpawnerSettings SpawnerSettings => _spawnerSettings;
+
+        public void InitializeSpawner()
+        {
+            CurrentMinSpawnDelay = _spawnerSettings.MinDelayToSpawn;
+            CurrentMaxSpawnDelay = _spawnerSettings.MaxDelayToSpawn;
+        }
 
         private void Start()
         {
@@ -44,10 +52,18 @@ namespace Fortis.Character.Spawner
 
             ServiceLocator.s_instance.Get<CharacterInstantiatorService>().InstantiateCharacter(_spawnerSettings.CharacterPrefab, positionToSpawn);
 
-            float delay = Random.Range(_spawnerSettings.MinDelayToSpawn, _spawnerSettings.MaxDelayToSpawn);
+            float delay = Random.Range(CurrentMinSpawnDelay, CurrentMaxSpawnDelay);
             yield return new WaitForSeconds(delay);
             ResetCoroutine();
         }
+    }
+
+    public enum SpawnerType
+    {
+        Red,
+        Green,
+        Blue,
+        Yellow
     }
 }
 

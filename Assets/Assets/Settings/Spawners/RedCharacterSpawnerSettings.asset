@@ -15,4 +15,4 @@ MonoBehaviour:
   CharacterPrefab: {fileID: -2407555983689691940, guid: f241d136a9b81ea4a9859e8770ec3a7a, type: 3}
   MinDelayToSpawn: 1
   MaxDelayToSpawn: 5
-  RaidousRange: 5
+  RaidousRange: 4
