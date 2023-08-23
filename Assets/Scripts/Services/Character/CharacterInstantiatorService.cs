@@ -30,7 +30,7 @@ namespace Fortis.Services.Character
 
             foreach (CharacterBase character in CharacterBases)
             {
-                if (character.GetType() == reference.GetType())
+                if (character.gameObject.activeSelf && character.GetType() == reference.GetType())
                 {
                     charactersQuantity++;
                 }
