@@ -5,16 +5,18 @@ namespace Fortis.Services.Character
 {
     public class CharacterCollisionService : GameServiceBase
     {
-        public void OnCharacterCollide(CharacterBase characterOne, CharacterBase characterTwo)
+        public void OnCharacterCollide(CharacterBase characterOne, CharacterBase characterTwo, bool isAbleMultiplier)
         {
-            if (characterOne.GetType() == characterTwo.GetType())
+            bool isSameType = characterOne.GetType() == characterTwo.GetType();
+
+            if (isSameType && isAbleMultiplier)
             {
                 ServiceLocator.s_instance.Get<CharacterInstantiatorService>().InstantiateCharacter(characterOne, characterOne.transform.position);
             }
-            else
+            else if(!isSameType)
             {
-                Destroy(characterOne.gameObject);
-                Destroy(characterTwo.gameObject);
+                characterOne.gameObject.SetActive(false);
+                characterTwo.gameObject.SetActive(false);
             }
         }
 

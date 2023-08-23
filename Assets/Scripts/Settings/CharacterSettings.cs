@@ -7,5 +7,7 @@ namespace Fortis.Character
     {
         public float Speed = 1f;
         public float DelayToCollide = 0.5f;
+        [Tooltip("Multiplied by characters quantity to increase delay")]
+        public float DelayIncreasage;
     }
 }

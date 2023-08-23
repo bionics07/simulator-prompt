@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: CharacterSettings
   m_EditorClassIdentifier: 
   Speed: 2
+  DelayToCollide: 1.5
+  DelayIncreasage: 0.1
