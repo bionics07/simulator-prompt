@@ -50,7 +50,7 @@ namespace Fortis.Character.Spawner
 
             Vector3 positionToSpawn = new Vector3(xPosition, 0, zPosition);
 
-            ServiceLocator.s_instance.Get<CharacterInstantiatorService>().InstantiateCharacter(_spawnerSettings.CharacterPrefab, positionToSpawn);
+            ServiceLocator.Instance.Get<CharacterInstantiatorService>().InstantiateCharacter(_spawnerSettings.CharacterPrefab, positionToSpawn);
 
             float delay = Random.Range(CurrentMinSpawnDelay, CurrentMaxSpawnDelay);
             yield return new WaitForSeconds(delay);

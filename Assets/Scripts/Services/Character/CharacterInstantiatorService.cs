@@ -4,9 +4,14 @@ using UnityEngine;
 
 namespace Fortis.Services.Character
 {
-    public class CharacterInstantiatorService : GameServiceBase
+    public class CharacterInstantiatorService : MonoBehaviour, GameServiceBase
     {
         public List<CharacterBase> CharacterBases { get; private set; } = new List<CharacterBase>();
+
+        public void Awake()
+        {
+            Register();
+        }
 
         public CharacterBase InstantiateCharacter(CharacterBase reference, Vector3 position)
         {
@@ -50,14 +55,14 @@ namespace Fortis.Services.Character
             return newCharacter;
         }
 
-        public override void Register()
+        public void Register()
         {
-            ServiceLocator.s_instance.RegisterService(this);
+            ServiceLocator.Instance.RegisterService(this);
         }
 
-        public override void Unregister()
+        public void Unregister()
         {
-            ServiceLocator.s_instance.UnregisterService(this);
+            ServiceLocator.Instance.UnregisterService(this);
         }
     }
 }

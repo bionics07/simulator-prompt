@@ -5,13 +5,14 @@ using UnityEngine;
 
 namespace Fortis.Services
 {
-    public class SpawnerService : GameServiceBase
+    public class SpawnerService : MonoBehaviour, GameServiceBase
     {
         [SerializeField]
         private List<CharacterSpawner> _characterSpawners;
 
         private void Awake()
         {
+            Register();
             InitializeSpawners();
         }
 
@@ -32,14 +33,14 @@ namespace Fortis.Services
             }
         }
 
-        public override void Register()
+        public void Register()
         {
-            ServiceLocator.s_instance.RegisterService(this);
+            ServiceLocator.Instance.RegisterService(this);
         }
 
-        public override void Unregister()
+        public void Unregister()
         {
-            ServiceLocator.s_instance.UnregisterService(this);
+            ServiceLocator.Instance.UnregisterService(this);
         }
 
 

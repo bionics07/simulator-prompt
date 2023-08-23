@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Fortis.Services.Character
 {
-    public class CharacterMovementService : GameServiceBase
+    public class CharacterMovementService : MonoBehaviour, GameServiceBase
     {
         [SerializeField]
         private CharacterMovementSettings _movementSettings;
@@ -15,14 +15,14 @@ namespace Fortis.Services.Character
             return new Vector3(xPosition, 0, zPosition);
         }
 
-        public override void Register()
+        public void Register()
         {
-            ServiceLocator.s_instance.RegisterService(this);
+            ServiceLocator.Instance.RegisterService(this);
         }
 
-        public override void Unregister()
+        public void Unregister()
         {
-            ServiceLocator.s_instance.UnregisterService(this);
+            ServiceLocator.Instance.UnregisterService(this);
         }
     }
 }

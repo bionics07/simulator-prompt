@@ -23,7 +23,7 @@ namespace Fortis.Character
 
         private void SetDestination()
         {
-            _currentDestination = ServiceLocator.s_instance.Get<CharacterMovementService>().GetDestination();
+            _currentDestination = ServiceLocator.Instance.Get<CharacterMovementService>().GetDestination();
             transform.LookAt(_currentDestination);
         }
 
@@ -47,7 +47,7 @@ namespace Fortis.Character
         {
             if (other.TryGetComponent(out CharacterBase collidedCharacter))
             {
-                ServiceLocator.s_instance.Get<CharacterCollisionService>().OnCharacterCollide(this, collidedCharacter, IsAbleToDuplicate());
+                ServiceLocator.Instance.Get<CharacterCollisionService>().OnCharacterCollide(this, collidedCharacter, IsAbleToDuplicate());
             }
         }
 
@@ -64,7 +64,7 @@ namespace Fortis.Character
 
         private float GetCurrentDelayToDuplicate()
         {
-            int charactersQuantity = ServiceLocator.s_instance.Get<CharacterInstantiatorService>().GetCharactersQuantity(this);
+            int charactersQuantity = ServiceLocator.Instance.Get<CharacterInstantiatorService>().GetCharactersQuantity(this);
             float currentIncreaseDelay = _characterSettings.DelayIncreasage * charactersQuantity;
             
             return currentIncreaseDelay + _characterSettings.DelayToCollide; 

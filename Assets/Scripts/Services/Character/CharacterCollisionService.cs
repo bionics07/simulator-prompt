@@ -10,7 +10,7 @@ namespace Fortis.Services.Character
 
             if (isSameType && isAbleMultiplier)
             {
-                ServiceLocator.s_instance.Get<CharacterInstantiatorService>().InstantiateCharacter(characterOne, characterOne.transform.position);
+                ServiceLocator.Instance.Get<CharacterInstantiatorService>().InstantiateCharacter(characterOne, characterOne.transform.position);
                 characterOne.UpdateCurrentDelayToDuplicate();
                 characterTwo.UpdateCurrentDelayToDuplicate();
             }
@@ -26,14 +26,14 @@ namespace Fortis.Services.Character
             return characterOne.GetType() == characterTwo.GetType();
         }
 
-        public override void Register()
+        public void Register()
         {
-            ServiceLocator.s_instance.RegisterService(this);
+            ServiceLocator.Instance.RegisterService(this);
         }
 
-        public override void Unregister()
+        public void Unregister()
         {
-            ServiceLocator.s_instance.UnregisterService(this);
+            ServiceLocator.Instance.UnregisterService(this);
         }
     }
 }

@@ -2,25 +2,10 @@ using UnityEngine;
 
 namespace Fortis.Services
 {
-    public abstract class GameServiceBase : MonoBehaviour
+    public interface GameServiceBase
     {
-        private void OnEnable()
-        {
-             Register();
-        }
+        void Register();
 
-        private void OnDisable()
-        {
-            Unregister();
-        }
-
-        private void OnDestroy()
-        {
-            Unregister();
-        }
-
-        public abstract void Register();
-
-        public abstract void Unregister();
+        void Unregister();
     }
 }

@@ -18,7 +18,7 @@ namespace Fortis.UI.Spawners
 
         private void Start()
         {
-            _characterSpawner = ServiceLocator.s_instance.Get<SpawnerService>().GetSpawner(_spawnerType);
+            _characterSpawner = ServiceLocator.Instance.Get<SpawnerService>().GetSpawner(_spawnerType);
 
             _minDelayInputField.text = _characterSpawner.CurrentMinSpawnDelay.ToString();
             _maxDelayInputField.text = _characterSpawner.CurrentMaxSpawnDelay.ToString();

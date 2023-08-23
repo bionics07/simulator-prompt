@@ -3,18 +3,17 @@ using UnityEngine;
 
 namespace Fortis.Services
 {
-    public class ServiceLocator : MonoBehaviour
+    public class ServiceLocator
     {
-        public static ServiceLocator s_instance;
+        private ServiceLocator() { }
+
+        public static ServiceLocator Instance { get; private set; }
 
         public Dictionary<string, GameServiceBase> Services = new Dictionary<string, GameServiceBase>();
 
-        private void Awake()
+        public static void Initialize()
         {
-            if(s_instance == null)
-            {
-                s_instance = this;
-            }
+            Instance = new ServiceLocator();
         }
 
         public T Get<T>() where T : GameServiceBase
