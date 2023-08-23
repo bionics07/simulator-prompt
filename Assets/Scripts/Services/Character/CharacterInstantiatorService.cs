@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Fortis.Services.Character
 {
-    public class CharacterInstantiatorService : MonoBehaviour, GameServiceBase
+    public class CharacterInstantiatorService : MonoBehaviour, IGameService
     {
         public List<CharacterBase> CharacterBases { get; private set; } = new List<CharacterBase>();
 

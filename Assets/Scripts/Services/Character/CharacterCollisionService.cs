@@ -2,7 +2,7 @@ using Fortis.Character;
 
 namespace Fortis.Services.Character
 {
-    public class CharacterCollisionService : GameServiceBase
+    public class CharacterCollisionService : IGameService
     {
         public void OnCharacterCollide(CharacterBase characterOne, CharacterBase characterTwo, bool isAbleMultiplier)
         {

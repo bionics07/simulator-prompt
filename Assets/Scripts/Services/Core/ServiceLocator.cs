@@ -9,14 +9,14 @@ namespace Fortis.Services
 
         public static ServiceLocator Instance { get; private set; }
 
-        public Dictionary<string, GameServiceBase> Services = new Dictionary<string, GameServiceBase>();
+        public Dictionary<string, IGameService> Services = new Dictionary<string, IGameService>();
 
         public static void Initialize()
         {
             Instance = new ServiceLocator();
         }
 
-        public T Get<T>() where T : GameServiceBase
+        public T Get<T>() where T : IGameService
         {
             string key = typeof(T).Name;
             if (!Services.ContainsKey(key))
@@ -27,7 +27,7 @@ namespace Fortis.Services
             return (T)Services[key];
         }
 
-        public void RegisterService<T>(T service) where T : GameServiceBase
+        public void RegisterService<T>(T service) where T : IGameService
         {
             string key = typeof(T).Name;
             if (!Services.ContainsKey(key))
@@ -36,7 +36,7 @@ namespace Fortis.Services
             }
         }
 
-        public void UnregisterService<T>(T service) where T : GameServiceBase
+        public void UnregisterService<T>(T service) where T : IGameService
         {
             string key = typeof(T).Name;
             if (Services.ContainsKey(key))

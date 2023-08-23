@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Fortis.Services
 {
-    public interface GameServiceBase
+    public interface IGameService
     {
         void Register();
 

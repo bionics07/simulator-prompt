@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Fortis.Services
 {
-    public class SpawnerService : MonoBehaviour, GameServiceBase
+    public class SpawnerService : MonoBehaviour, IGameService
     {
         [SerializeField]
         private List<CharacterSpawner> _characterSpawners;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Fortis.Services.Character
 {
-    public class CharacterMovementService : MonoBehaviour, GameServiceBase
+    public class CharacterMovementService : MonoBehaviour, IGameService
     {
         [SerializeField]
         private CharacterMovementSettings _movementSettings;
