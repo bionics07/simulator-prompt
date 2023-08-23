@@ -1,5 +1,6 @@
 using Fortis.Character.Spawner;
 using Fortis.Services;
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -24,6 +25,13 @@ namespace Fortis.UI.Spawners
             _maxDelayInputField.text = _characterSpawner.CurrentMaxSpawnDelay.ToString();
             _minDelayInputField.onSubmit.AddListener(OnSubmitChangeOnMinDelay);
             _maxDelayInputField.onSubmit.AddListener(OnSubmitChangeOnMaxDelay);
+            _minDelayInputField.onDeselect.AddListener(ResetFields);
+        }
+
+        private void ResetFields(string text)
+        {
+            _minDelayInputField.text = _characterSpawner.CurrentMinSpawnDelay.ToString();
+            _maxDelayInputField.text = _characterSpawner.CurrentMaxSpawnDelay.ToString();
         }
 
         private void OnSubmitChangeOnMinDelay(string submitText)
