@@ -11,12 +11,19 @@ namespace Fortis.Services.Character
             if (isSameType && isAbleMultiplier)
             {
                 ServiceLocator.s_instance.Get<CharacterInstantiatorService>().InstantiateCharacter(characterOne, characterOne.transform.position);
+                characterOne.UpdateCurrentDelayToDuplicate();
+                characterTwo.UpdateCurrentDelayToDuplicate();
             }
             else if(!isSameType)
             {
                 characterOne.gameObject.SetActive(false);
                 characterTwo.gameObject.SetActive(false);
             }
+        }
+
+        public bool CollisionWithSameType(CharacterBase characterOne, CharacterBase characterTwo)
+        {
+            return characterOne.GetType() == characterTwo.GetType();
         }
 
         public override void Register()

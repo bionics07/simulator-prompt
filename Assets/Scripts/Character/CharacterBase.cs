@@ -15,12 +15,6 @@ namespace Fortis.Character
         private float _elapsedDuplicateTime = 0;
         private float _currentDelayToDuplicate = 0;
 
-
-        private void Start()
-        {
-            
-        }
-
         public void OnStart()
         {
             SetDestination();
@@ -54,10 +48,6 @@ namespace Fortis.Character
             if (other.TryGetComponent(out CharacterBase collidedCharacter))
             {
                 ServiceLocator.s_instance.Get<CharacterCollisionService>().OnCharacterCollide(this, collidedCharacter, IsAbleToDuplicate());
-                _elapsedDuplicateTime = 0;
-                UpdateCurrentDelayToDuplicate();
-                //collidedCharacter.UpdateCurrentDelayToDuplicate();
-                //collidedCharacter._elapsedDuplicateTime = _elapsedDuplicateTime;
             }
         }
 
@@ -68,6 +58,7 @@ namespace Fortis.Character
 
         public void UpdateCurrentDelayToDuplicate()
         {
+            _elapsedDuplicateTime = 0;
             _currentDelayToDuplicate = GetCurrentDelayToDuplicate();
         }
 
