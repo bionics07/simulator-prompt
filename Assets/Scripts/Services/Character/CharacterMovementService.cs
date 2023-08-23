@@ -7,6 +7,11 @@ namespace Fortis.Services.Character
         [SerializeField]
         private CharacterMovementSettings _movementSettings;
 
+        private void Awake()
+        {
+            Register();
+        }
+
         public Vector3 GetDestination()
         {
             float xPosition = Random.Range(_movementSettings.MinDestinationValue.x, _movementSettings.MaxDestinationValue.x);
