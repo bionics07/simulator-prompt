@@ -1,5 +1,4 @@
 using Fortis.Character;
-using UnityEngine;
 
 namespace Fortis.Services.Character
 {

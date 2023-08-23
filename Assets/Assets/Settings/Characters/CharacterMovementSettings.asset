@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b928d779088eddc4d92d7441b48421ef, type: 3}
   m_Name: CharacterMovementSettings
   m_EditorClassIdentifier: 
-  MaxDestinationValue: {x: 10, y: 0, z: 20}
-  MinDestinationValue: {x: -10, y: 0, z: -20}
+  MaxDestinationValue: {x: 10, y: 0, z: 13}
+  MinDestinationValue: {x: -10, y: 0, z: -9}

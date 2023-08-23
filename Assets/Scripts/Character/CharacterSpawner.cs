@@ -1,7 +1,6 @@
 using Fortis.Services;
 using Fortis.Services.Character;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Fortis.Character.Spawner

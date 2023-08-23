@@ -1,6 +1,7 @@
 using Fortis.Services;
 using Fortis.Services.Character;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 namespace Fortis.Character
 {
@@ -14,6 +15,11 @@ namespace Fortis.Character
         private float _elapsedDuplicateTime = 0;
         private float _currentDelayToDuplicate = 0;
 
+
+        private void Start()
+        {
+            
+        }
 
         public void OnStart()
         {
@@ -50,6 +56,8 @@ namespace Fortis.Character
                 ServiceLocator.s_instance.Get<CharacterCollisionService>().OnCharacterCollide(this, collidedCharacter, IsAbleToDuplicate());
                 _elapsedDuplicateTime = 0;
                 UpdateCurrentDelayToDuplicate();
+                //collidedCharacter.UpdateCurrentDelayToDuplicate();
+                //collidedCharacter._elapsedDuplicateTime = _elapsedDuplicateTime;
             }
         }
 

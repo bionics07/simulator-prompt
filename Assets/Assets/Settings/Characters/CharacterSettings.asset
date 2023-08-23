@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52907bc36634de043acf4e798fab2353, type: 3}
   m_Name: CharacterSettings
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 1.5
   DelayToCollide: 1.5
   DelayIncreasage: 0.1
