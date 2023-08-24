@@ -1,4 +1,4 @@
-# fortis-prompt
+# simulator-prompt
 
 Hello! This is a test project made to fortis.
 
