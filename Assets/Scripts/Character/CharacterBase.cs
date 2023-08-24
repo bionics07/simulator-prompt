@@ -11,7 +11,7 @@ namespace Fortis.Character
 
         private const float COMPENSATION_TO_FINISH_RUNNING = 1f;
         private Vector3 _currentDestination = Vector3.zero;
-        private float _elapsedDuplicateTime = 0;
+        private float _elapsedTimeToDuplicate = 0;
         private float _currentDelayToDuplicate = 0;
 
         public void OnStart()
@@ -30,7 +30,7 @@ namespace Fortis.Character
         {
             if(!IsAbleToDuplicate())
             {
-                _elapsedDuplicateTime += Time.deltaTime;
+                _elapsedTimeToDuplicate += Time.deltaTime;
             }
 
             if (Vector3.Distance(_currentDestination, transform.position) <= COMPENSATION_TO_FINISH_RUNNING)
@@ -52,12 +52,12 @@ namespace Fortis.Character
 
         private bool IsAbleToDuplicate()
         {
-            return _elapsedDuplicateTime >= _currentDelayToDuplicate;
+            return _elapsedTimeToDuplicate >= _currentDelayToDuplicate;
         }
 
         public void UpdateCurrentDelayToDuplicate()
         {
-            _elapsedDuplicateTime = 0;
+            _elapsedTimeToDuplicate = 0;
             _currentDelayToDuplicate = GetCurrentDelayToDuplicate();
         }
 

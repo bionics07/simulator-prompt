@@ -927,7 +927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Blue Team
+  m_text: Green Team
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minDelayInputField: {fileID: 2499027989202850145}
   _maxDelayInputField: {fileID: 2853080995185206404}
-  _spawnerType: 2
+  _spawnerType: 1
 --- !u!1 &7827261097373446047
 GameObject:
   m_ObjectHideFlags: 0
