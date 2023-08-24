@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Fortis.Services.Character
+namespace Lumen.Services.Character
 {
     public class CharacterMovementService : MonoBehaviour, IGameService
     {

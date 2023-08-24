@@ -1,8 +1,8 @@
-using Fortis.Services;
-using Fortis.Services.Character;
+using Lumen.Services;
+using Lumen.Services.Character;
 using UnityEngine;
 
-namespace Fortis.Character
+namespace Lumen.Character
 {
     public class CharacterBase : MonoBehaviour
     {

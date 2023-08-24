@@ -1,6 +1,6 @@
-using Fortis.Character;
+using Lumen.Character;
 
-namespace Fortis.Services.Character
+namespace Lumen.Services.Character
 {
     public class CharacterCollisionService : IGameService
     {

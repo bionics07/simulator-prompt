@@ -1,9 +1,9 @@
-using Fortis.Character.Spawner;
-using Fortis.Services;
+using Lumen.Character.Spawner;
+using Lumen.Services;
 using TMPro;
 using UnityEngine;
 
-namespace Fortis.UI.Spawners
+namespace Lumen.UI.Spawners
 {
     public class SpawnerView : MonoBehaviour
     {

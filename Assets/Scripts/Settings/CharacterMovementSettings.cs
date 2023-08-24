@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Fortis.Services.Character
+namespace Lumen.Services.Character
 {
     [CreateAssetMenu(fileName = "CharacterMovementSettings", menuName = "ScriptableObjects/Settings/CharacterMovement")]
     public class CharacterMovementSettings : ScriptableObject

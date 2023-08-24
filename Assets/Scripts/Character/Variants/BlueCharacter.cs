@@ -1,5 +1,5 @@
 
-namespace Fortis.Character
+namespace Lumen.Character
 {
     public class BlueCharacter : CharacterBase
     {

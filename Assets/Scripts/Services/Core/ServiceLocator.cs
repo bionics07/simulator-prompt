@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Fortis.Services
+namespace Lumen.Services
 {
     public class ServiceLocator
     {

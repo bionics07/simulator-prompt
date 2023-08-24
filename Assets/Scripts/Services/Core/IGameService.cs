@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Fortis.Services
+namespace Lumen.Services
 {
     public interface IGameService
     {

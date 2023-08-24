@@ -1,9 +1,9 @@
-using Fortis.Character;
-using Fortis.Character.Spawner;
+using Lumen.Character;
+using Lumen.Character.Spawner;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Fortis.Services
+namespace Lumen.Services
 {
     public class SpawnerService : MonoBehaviour, IGameService
     {

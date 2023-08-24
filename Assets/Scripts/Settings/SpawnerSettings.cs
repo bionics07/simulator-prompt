@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Fortis.Character.Spawner
+namespace Lumen.Character.Spawner
 {
     [CreateAssetMenu(fileName = "SpawnerSettings", menuName = "ScriptableObjects/Settings/Spawner")]
     public class SpawnerSettings : ScriptableObject

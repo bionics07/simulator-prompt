@@ -1,9 +1,9 @@
-using Fortis.Services;
-using Fortis.Services.Character;
+using Lumen.Services;
+using Lumen.Services.Character;
 using System.Collections;
 using UnityEngine;
 
-namespace Fortis.Character.Spawner
+namespace Lumen.Character.Spawner
 {
     public class CharacterSpawner : MonoBehaviour
     {

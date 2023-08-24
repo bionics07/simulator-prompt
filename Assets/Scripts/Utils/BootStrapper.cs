@@ -1,8 +1,8 @@
-using Fortis.Services;
-using Fortis.Services.Character;
+using Lumen.Services;
+using Lumen.Services.Character;
 using UnityEngine;
 
-namespace Fortis.Utils
+namespace Lumen.Utils
 {
     public static class Bootstrapper
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Fortis.Character
+namespace Lumen.Character
 {
     [CreateAssetMenu(fileName = "CharacterSettings", menuName = "ScriptableObjects/Settings/Character")]
     public class CharacterSettings : ScriptableObject

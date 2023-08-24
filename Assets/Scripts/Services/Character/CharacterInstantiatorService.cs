@@ -1,8 +1,8 @@
-using Fortis.Character;
+using Lumen.Character;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Fortis.Services.Character
+namespace Lumen.Services.Character
 {
     public class CharacterInstantiatorService : MonoBehaviour, IGameService
     {
