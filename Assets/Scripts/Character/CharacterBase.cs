@@ -1,7 +1,6 @@
 using Fortis.Services;
 using Fortis.Services.Character;
 using UnityEngine;
-using UnityEngine.Timeline;
 
 namespace Fortis.Character
 {
@@ -10,7 +9,7 @@ namespace Fortis.Character
         [SerializeField]
         private CharacterSettings _characterSettings;
 
-        private const float COMPENSATION_TO_FINISH = 1f;
+        private const float COMPENSATION_TO_FINISH_RUNNING = 1f;
         private Vector3 _currentDestination = Vector3.zero;
         private float _elapsedDuplicateTime = 0;
         private float _currentDelayToDuplicate = 0;
@@ -34,7 +33,7 @@ namespace Fortis.Character
                 _elapsedDuplicateTime += Time.deltaTime;
             }
 
-            if (Vector3.Distance(_currentDestination, transform.position) <= COMPENSATION_TO_FINISH)
+            if (Vector3.Distance(_currentDestination, transform.position) <= COMPENSATION_TO_FINISH_RUNNING)
             {
                 SetDestination();
             }
