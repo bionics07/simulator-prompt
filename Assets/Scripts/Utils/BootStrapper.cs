@@ -9,7 +9,7 @@ namespace Fortis.Utils
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void Initiailze()
         {
-            // Initialize default service locator.
+            // Initialize service locator.
             ServiceLocator.Initialize();
 
             ServiceLocator.Instance.RegisterService(new CharacterCollisionService());
