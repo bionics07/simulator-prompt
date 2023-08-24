@@ -64,7 +64,7 @@ namespace Fortis.Character
         private float GetCurrentDelayToDuplicate()
         {
             int charactersQuantity = ServiceLocator.Instance.Get<CharacterInstantiatorService>().GetCharactersQuantity(this);
-            float currentIncreaseDelay = _characterSettings.DelayIncreasage * charactersQuantity;
+            float currentIncreaseDelay = _characterSettings.DelayIncreasageMultiplier * charactersQuantity;
             
             return currentIncreaseDelay + _characterSettings.DelayToCollide; 
         }

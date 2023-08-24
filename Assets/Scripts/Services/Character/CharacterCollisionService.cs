@@ -4,11 +4,11 @@ namespace Fortis.Services.Character
 {
     public class CharacterCollisionService : IGameService
     {
-        public void OnCharacterCollide(CharacterBase characterOne, CharacterBase characterTwo, bool isAbleMultiplier)
+        public void OnCharacterCollide(CharacterBase characterOne, CharacterBase characterTwo, bool isAbleDuplicate)
         {
             bool isSameType = characterOne.GetType() == characterTwo.GetType();
 
-            if (isSameType && isAbleMultiplier)
+            if (isSameType && isAbleDuplicate)
             {
                 ServiceLocator.Instance.Get<CharacterInstantiatorService>().InstantiateCharacter(characterOne, characterOne.transform.position);
                 characterOne.UpdateCurrentDelayToDuplicate();
@@ -19,11 +19,6 @@ namespace Fortis.Services.Character
                 characterOne.gameObject.SetActive(false);
                 characterTwo.gameObject.SetActive(false);
             }
-        }
-
-        public bool CollisionWithSameType(CharacterBase characterOne, CharacterBase characterTwo)
-        {
-            return characterOne.GetType() == characterTwo.GetType();
         }
 
         public void Register()

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1.5
   DelayToCollide: 1.5
-  DelayIncreasage: 0.1
+  DelayIncreasageMultiplier: 0.1
