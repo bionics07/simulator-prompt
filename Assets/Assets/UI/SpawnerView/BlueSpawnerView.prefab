@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 3561867707705263674}
   - component: {fileID: 3675258216477477521}
   m_Layer: 5
-  m_Name: SpawnerBlue
+  m_Name: BlueSpawnerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

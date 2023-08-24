@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 2316693516408259565}
   - component: {fileID: 6839317644188796238}
   m_Layer: 5
-  m_Name: SpawnerYellow
+  m_Name: YellowSpawnerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

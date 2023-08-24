@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 1031476540621017881}
   - component: {fileID: 7099533905249121599}
   m_Layer: 5
-  m_Name: SpawnerRed
+  m_Name: RedSpawnerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
